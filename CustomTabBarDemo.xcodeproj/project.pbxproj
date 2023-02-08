@@ -14,6 +14,9 @@
 		F2596A42298EE4A600FF8357 /* CustomTabBarDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2596A41298EE4A600FF8357 /* CustomTabBarDemoTests.swift */; };
 		F2596A4C298EE4A600FF8357 /* CustomTabBarDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2596A4B298EE4A600FF8357 /* CustomTabBarDemoUITests.swift */; };
 		F2596A4E298EE4A600FF8357 /* CustomTabBarDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2596A4D298EE4A600FF8357 /* CustomTabBarDemoUITestsLaunchTests.swift */; };
+		F2596A5B298EE4DB00FF8357 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2596A5A298EE4DB00FF8357 /* TabBarView.swift */; };
+		F2596A5E298EE60000FF8357 /* CornerRadius+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2596A5D298EE60000FF8357 /* CornerRadius+Extension.swift */; };
+		F2596A60298EFDF200FF8357 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2596A5F298EFDF100FF8357 /* Roboto-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,10 @@
 		F2596A47298EE4A600FF8357 /* CustomTabBarDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomTabBarDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2596A4B298EE4A600FF8357 /* CustomTabBarDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarDemoUITests.swift; sourceTree = "<group>"; };
 		F2596A4D298EE4A600FF8357 /* CustomTabBarDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F2596A5A298EE4DB00FF8357 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		F2596A5D298EE60000FF8357 /* CornerRadius+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadius+Extension.swift"; sourceTree = "<group>"; };
+		F2596A5F298EFDF100FF8357 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F2596A61298EFEB700FF8357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +101,9 @@
 		F2596A2F298EE4A400FF8357 /* CustomTabBarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F2596A61298EFEB700FF8357 /* Info.plist */,
+				F2596A5F298EFDF100FF8357 /* Roboto-Medium.ttf */,
+				F2596A5C298EE5E300FF8357 /* CustomTabBar */,
 				F2596A30298EE4A400FF8357 /* CustomTabBarDemoApp.swift */,
 				F2596A32298EE4A400FF8357 /* ContentView.swift */,
 				F2596A34298EE4A600FF8357 /* Assets.xcassets */,
@@ -125,6 +135,15 @@
 				F2596A4D298EE4A600FF8357 /* CustomTabBarDemoUITestsLaunchTests.swift */,
 			);
 			path = CustomTabBarDemoUITests;
+			sourceTree = "<group>";
+		};
+		F2596A5C298EE5E300FF8357 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F2596A5D298EE60000FF8357 /* CornerRadius+Extension.swift */,
+				F2596A5A298EE4DB00FF8357 /* TabBarView.swift */,
+			);
+			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +252,7 @@
 			files = (
 				F2596A38298EE4A600FF8357 /* Preview Assets.xcassets in Resources */,
 				F2596A35298EE4A600FF8357 /* Assets.xcassets in Resources */,
+				F2596A60298EFDF200FF8357 /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2596A5E298EE60000FF8357 /* CornerRadius+Extension.swift in Sources */,
 				F2596A33298EE4A400FF8357 /* ContentView.swift in Sources */,
+				F2596A5B298EE4DB00FF8357 /* TabBarView.swift in Sources */,
 				F2596A31298EE4A400FF8357 /* CustomTabBarDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,11 +442,14 @@
 				DEVELOPMENT_TEAM = VT9QW74UCT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CustomTabBarDemo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +474,14 @@
 				DEVELOPMENT_TEAM = VT9QW74UCT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CustomTabBarDemo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
